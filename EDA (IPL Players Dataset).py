@@ -3,23 +3,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df= pd.read_csv("E:\Pyhton code\Data Sets\cricket_data_2025.csv")
+# Load the dataset
+df = pd.read_csv("E:\Pyhton code\Data Sets\cricket_data_2025.csv")
 
-# print(df.head())
+# Display basic information about the dataset
+# print(df.head())  # Shows the first few rows of the dataset
+# print(df.info())  # Provides details about data types and null values
+# print(df.describe())  # Summary statistics of numerical columns
 
-# print(df.info())
-# print(df.describe())
+# Data Cleaning: Removing duplicate and null values
+df = df.drop_duplicates()  # Removes duplicate records if any
+df = df.dropna()  # Removes rows with missing values
+# print(df.isnull().sum())  # Verifies that there are no missing values left
 
-#Removing null values
-df= df.drop_duplicates()
-df = df.dropna()
-# print(df.isnull().sum())
-
-# print(df.info())
-
-#changing datatype
-# print(df.columns)
-
+# Data Type Conversion: Ensuring consistency in numerical columns
 df = df.astype({'Matches_Batted':'float', 'Not_Outs':'float', 'Runs_Scored':'float',
       'Batting_Average':'float', 'Balls_Faced':'float',
        'Batting_Strike_Rate':'float', 'Centuries':'float', 'Half_Centuries':'float', 'Fours':'float', 'Sixes':'float',
@@ -27,40 +24,42 @@ df = df.astype({'Matches_Batted':'float', 'Not_Outs':'float', 'Runs_Scored':'flo
        'Runs_Conceded':'float', 'Wickets_Taken':'float',
        'Bowling_Average':'float', 'Economy_Rate':'float', 'Bowling_Strike_Rate':'float',
        'Four_Wicket_Hauls':'float', 'Five_Wicket_Hauls':'float'})
-df['Highest_Score']=df['Highest_Score'].str.extract('(/d+)').astype(float)
+
+# Extracting numerical values from 'Highest_Score' column (if it contains '/' or text)
+df['Highest_Score'] = df['Highest_Score'].str.extract('(/d+)').astype(float)
+
+# Converting 'Year' column to datetime format
 df['Year'] = df['Year'].astype(int)
 df['Year'] = pd.to_datetime(df['Year'], format='%Y')
-# print(df.info())
 
+# Data Visualization
 
-# print(df.columns)
-
-
-# Histogram: Runs Scored
-sns.histplot(df["Runs_Scored"] , kde=True, bins=20, color="purple")
-plt.title("Run Scored")
+# Histogram: Distribution of Runs Scored
+sns.histplot(df["Runs_Scored"], kde=True, bins=20, color="purple")
+plt.title("Distribution of Runs Scored")
 plt.xlabel("Runs")
 plt.ylabel("Frequency")
 plt.show()
+# Conclusion: Most players have scored lower runs, with a few high scorers creating a right-skewed distribution.
 
-#Box Plot: For Wickets Taken by players
+# Box Plot: Outlier Detection for Wickets Taken
 plt.figure(figsize=(6, 5))
 sns.boxplot(x=df['Wickets_Taken'], color='orange')
 plt.title('Wickets Taken - Outlier Detection')
 plt.xlabel('Wickets Taken')
 plt.show()
+# Conclusion: The presence of outliers suggests that a few bowlers have taken an exceptionally high number of wickets.
     
-    
-#Scatter Plot:RUNS VS Batting strike rate
+# Scatter Plot: Relationship between Runs Scored and Batting Strike Rate
 plt.figure(figsize=(8, 5))
 sns.scatterplot(x=df['Runs_Scored'], y=df['Batting_Strike_Rate'], color='green')
 plt.title('Runs vs Batting Strike Rate')
 plt.xlabel('Runs Scored')
 plt.ylabel('Batting Strike Rate')
 plt.show()
+# Conclusion: There is a positive correlation, indicating that players who score more runs also tend to have a higher strike rate.
 
-
-#bar chat :To see top 10 players
+# Bar Chart: Top 10 Players by Total Runs Scored
 top_players = df.groupby('Player_Name')['Runs_Scored'].sum().nlargest(10)
 plt.figure(figsize=(10, 5))
 top_players.plot(kind='bar', color='purple')
@@ -69,17 +68,19 @@ plt.xlabel('Player Name')
 plt.ylabel('Total Runs')
 plt.xticks(rotation=45)
 plt.show()
+# Conclusion: A few standout players dominate the run-scoring chart, showing consistency and superior batting performance.
 
-
-#Pair Plot:shows overall performance of players
+# Pair Plot: Examining relationships between batting performance metrics
 sns.pairplot(df[['Runs_Scored', 'Batting_Average', 'Batting_Strike_Rate', 'Centuries']])
 plt.show()
+# Conclusion: The relationships confirm that players with high averages and centuries also tend to score more runs.
 
-#Scatterplot: shows relationship between matches played and runs scored in those matches.
+# Scatter Plot: Relationship between Matches Played and Runs Scored in a Year
 plt.figure(figsize=(12, 6))
 sns.scatterplot(data=df, x='Matches_Batted', y='Runs_Scored', hue='Year', palette='tab10')
 plt.xlabel("Matches")
 plt.ylabel("Runs")
-plt.title("Relationship between Matches playes and runs scored in a year")
+plt.title("Relationship between Matches Played and Runs Scored in a Year")
 plt.legend(title="Year", bbox_to_anchor=(1, 1))
 plt.show()
+# Conclusion: Players who participate in more matches generally score more runs, reinforcing the importance of consistent playtime.
