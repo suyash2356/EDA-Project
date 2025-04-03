@@ -37,44 +37,45 @@ df['Year'] = pd.to_datetime(df['Year'], format='%Y')
 
 
 # Histogram: Runs Scored
-# sns.histplot(df["Runs_Scored"] , kde=True, bins=20, color="purple")
-# plt.title("Run Scored")
-# plt.xlabel("Runs")
-# plt.ylabel("Frequency")
-# plt.show()
+sns.histplot(df["Runs_Scored"] , kde=True, bins=20, color="purple")
+plt.title("Run Scored")
+plt.xlabel("Runs")
+plt.ylabel("Frequency")
+plt.show()
 
 #Box Plot: For Wickets Taken by players
-# plt.figure(figsize=(6, 5))
-# sns.boxplot(x=df['Wickets_Taken'], color='orange')
-# plt.title('Wickets Taken - Outlier Detection')
-# plt.xlabel('Wickets Taken')
-# plt.show()\
+plt.figure(figsize=(6, 5))
+sns.boxplot(x=df['Wickets_Taken'], color='orange')
+plt.title('Wickets Taken - Outlier Detection')
+plt.xlabel('Wickets Taken')
+plt.show()
     
     
 #Scatter Plot:RUNS VS Batting strike rate
-# plt.figure(figsize=(8, 5))
-# sns.scatterplot(x=df['Runs_Scored'], y=df['Batting_Strike_Rate'], color='green')
-# plt.title('Runs vs Batting Strike Rate')
-# plt.xlabel('Runs Scored')
-# plt.ylabel('Batting Strike Rate')
-# plt.show()
+plt.figure(figsize=(8, 5))
+sns.scatterplot(x=df['Runs_Scored'], y=df['Batting_Strike_Rate'], color='green')
+plt.title('Runs vs Batting Strike Rate')
+plt.xlabel('Runs Scored')
+plt.ylabel('Batting Strike Rate')
+plt.show()
 
 
 #bar chat :To see top 10 players
-# top_players = df.groupby('Player_Name')['Runs_Scored'].sum().nlargest(10)
-# plt.figure(figsize=(10, 5))
-# top_players.plot(kind='bar', color='purple')
-# plt.title('Top 10 Players by Runs Scored')
-# plt.xlabel('Player Name')
-# plt.ylabel('Total Runs')
-# plt.xticks(rotation=45)
-# plt.show()
+top_players = df.groupby('Player_Name')['Runs_Scored'].sum().nlargest(10)
+plt.figure(figsize=(10, 5))
+top_players.plot(kind='bar', color='purple')
+plt.title('Top 10 Players by Runs Scored')
+plt.xlabel('Player Name')
+plt.ylabel('Total Runs')
+plt.xticks(rotation=45)
+plt.show()
 
 
 #Pair Plot:shows overall performance of players
-# sns.pairplot(df[['Runs_Scored', 'Batting_Average', 'Batting_Strike_Rate', 'Centuries']])
-# plt.show()
+sns.pairplot(df[['Runs_Scored', 'Batting_Average', 'Batting_Strike_Rate', 'Centuries']])
+plt.show()
 
+#Scatterplot: shows relationship between matches played and runs scored in those matches.
 plt.figure(figsize=(12, 6))
 sns.scatterplot(data=df, x='Matches_Batted', y='Runs_Scored', hue='Year', palette='tab10')
 plt.xlabel("Matches")
