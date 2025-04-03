@@ -46,6 +46,7 @@ plt.xlabel("House Interior")
 plt.ylabel("Average Price")
 plt.title("Average House Price by Furnishing Type")
 plt.show()
+# Conclusion: Fully furnished houses tend to have higher prices compared to semi-furnished or unfurnished houses.
 
 # Scatter plot: Carpet Area vs Price, colored by location
 plt.figure(figsize=(12, 6))
@@ -55,6 +56,7 @@ plt.ylabel("Price")
 plt.title("Relationship between Carpet Area and Price based on Location")
 plt.legend(title="Location", bbox_to_anchor=(1, 1))
 plt.show()
+# Conclusion: Generally, larger carpet areas correspond to higher prices, though location also plays a significant role in pricing.
 
 # Scatter plot: Super Area vs Price, colored by location
 plt.figure(figsize=(12, 6))
@@ -64,6 +66,7 @@ plt.ylabel("Price")
 plt.title("Relationship between Super Area and Price based on Location")
 plt.legend(title="Location", bbox_to_anchor=(1, 1))
 plt.show()
+# Conclusion: Similar to Carpet Area, Super Area also shows a positive correlation with price, with variations depending on location.
 
 # Categorize 'Carpet Area' into bins
 df['Carpet Area'] = pd.cut(df['Carpet Area'], bins=[0, 500, 1000, 1500, 2000, 3000], 
@@ -77,3 +80,4 @@ plt.ylabel("Price")
 plt.title("Price Distribution for Different Carpet Area Ranges by Location")
 plt.legend(title="Location", bbox_to_anchor=(1, 1))
 plt.show()
+# Conclusion: Higher carpet area categories have wider price distributions, showing that prices vary significantly within each range based on location and other factors.
