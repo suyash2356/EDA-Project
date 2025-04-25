@@ -38,6 +38,10 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 - Visualizing team-wise performance using **bar charts & heatmaps**.
 - Predicting performance trends using **correlation analysis**.
 
+
+
+---
+
 - ### 4 **Bank Transactions Dataset - EDA** 🏏
 **Dataset:** Transaction statistics of people.
 
