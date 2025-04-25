@@ -38,6 +38,15 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 - Visualizing team-wise performance using **bar charts & heatmaps**.
 - Predicting performance trends using **correlation analysis**.
 
+- ### 4 **Bank Transactions Dataset - EDA** 🏏
+**Dataset:** Transaction statistics of people.
+
+**Key Analysis:**
+- **Transactions trends** (amount, date, mode use for transaction,age).
+- Visualizing transactions frequency, total amount in a month through **line plot & hist plot**.
+- Then fiding which age is group are doing more transaction, then transaction ration between debit card and credit card with help of **pie chart, bar chart** and many more.
+- **Predictions**: Based on transaction trends, we can predict peak transaction periods (March and September), high transaction frequency among youth (ages 20–30), and potential increases in sales and service demand during these times, especially from student demographics.
+
 
 ---
 
