@@ -42,7 +42,7 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 
 ---
 
-- ### 4 **Bank Transactions Dataset - EDA** 🏏
+- ### 4 **Bank Transactions Dataset - EDA** 
 **Dataset:** Transaction statistics of people.
 
 **Key Analysis:**
