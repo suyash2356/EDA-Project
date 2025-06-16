@@ -53,7 +53,18 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 
 
 ---
+5️⃣ **Rape Cases in India - EDA** 📊
+**Dataset:** Crime data related to rape cases reported across India.
 
+**Key Analysis:**
+-State-wise and year-wise distribution of rape cases.
+-Trend analysis to uncover temporal patterns and spikes.
+-Demographic insights based on victim age and location.
+-Visualizations through bar charts, heatmaps, and line graphs.
+
+
+
+---
 ## 🛠️ Data Cleaning & Processing
 ### **Practice Script: Cleaning & Processing Data** 🧹
 This script demonstrates **data preprocessing techniques** on raw datasets.
