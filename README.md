@@ -57,10 +57,10 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 **Dataset:** Crime data related to rape cases reported across India.
 
 **Key Analysis:**
--State-wise and year-wise distribution of rape cases.
--Trend analysis to uncover temporal patterns and spikes.
--Demographic insights based on victim age and location.
--Visualizations through bar charts, heatmaps, and line graphs.
+- State-wise and year-wise distribution of rape cases.
+- Trend analysis to uncover temporal patterns and spikes.
+- Demographic insights based on victim age and location.
+- Visualizations through bar charts, heatmaps, and line graphs.
 
 
 
