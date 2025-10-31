@@ -62,6 +62,16 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 - Demographic insights based on victim age and location.
 - Visualizations through bar charts, heatmaps, and line graphs.
 
+  
+6️⃣ **Comprehensive AI Industry Report - EDA** 🤖
+**Dataset:** Multiple datasets covering global AI companies, models, agents, and market trends.
+
+**Key Analysis:**
+- Comparison of leading AI companies and their model performance.
+- Trends in global AI investments and ecosystem growth.
+- Evaluation of the most efficient and innovative AI models.
+- Exploration of AI agents, their applications, and adoption rates.
+- Insights into the current AI landscape and future outlook.
 
 
 ---
