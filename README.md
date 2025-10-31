@@ -53,7 +53,7 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 
 
 ---
-5️⃣ **Rape Cases in India - EDA** 📊
+### 5️⃣ **Rape Cases in India - EDA** 📊
 **Dataset:** Crime data related to rape cases reported across India.
 
 **Key Analysis:**
@@ -64,7 +64,7 @@ Welcome to my Projects! 🚀 This repository contains **EDA projects** on differ
 
 
 ---  
-6️⃣ **Comprehensive AI Industry Report - EDA** 🤖
+### 6️⃣ **Comprehensive AI Industry Report - EDA** 🤖
 **Dataset:** Multiple datasets covering global AI companies, models, agents, and market trends.
 
 **Key Analysis:**
